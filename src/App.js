@@ -1,26 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import UserCard from './UserCard'
 
-class App extends Component {
+class App extends PureComponent {
+  constructor () {
+    super();
+    this.state = {
+      users: []
+    }
+      this.showActiveUsers = this.showActiveUsers.bind(this);
+  }
+  componentWillMount() {
+      fetch(`http://www.json-generator.com/api/json/get/cpTmnSrPCa?indent=2`)
+          .then(result => result.json()
+              .then(data => {
+                  this.setState({users: data})
+                }))
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <React.Fragment>
+            <button onClick = {this.showActiveUsers}>Show active users</button>
+            <div className='cardContainer'>
+                {this.state.users.map(user => {
+                    return <UserCard key={user._id} user={user}/>
+                })}
+            </div>
+        </React.Fragment>
     );
   }
 }

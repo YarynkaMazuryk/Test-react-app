@@ -1,0 +1,37 @@
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.userCard {
+    flex-basis: 45%;
+    height: 100%;
+    margin: 10px;
+    border: 1px solid #ddd;
+}
+.headerCard {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+.mainContent {
+    text-align: center;
+}
+.footerCard {
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.active, .not-active {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.active {
+    background: green;
+}
+.not-active  {
+    background: grey;
+}
