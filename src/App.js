@@ -1,27 +1,44 @@
 import React, { PureComponent } from 'react';
 import UserCard from './UserCard'
+import './App.css';
 
 class App extends PureComponent {
   constructor () {
     super();
+    this.users = [];
     this.state = {
-      users: []
+      usersForRender: []
     }
-      this.showActiveUsers = this.showActiveUsers.bind(this);
   }
   componentWillMount() {
       fetch(`http://www.json-generator.com/api/json/get/cpTmnSrPCa?indent=2`)
           .then(result => result.json()
               .then(data => {
-                  this.setState({users: data})
-                }))
+                  this.users = data;
+                  this.setState({usersForRender: data})
+              }))
+  }
+  showUsers(e) {
+      if (e.currentTarget.className === 'activeUser'){
+          const activeUsers =  this.users.filter(user => user.isActive === true);
+          this.setState({usersForRender: activeUsers})
+      } else if (e.currentTarget.className === 'inactiveUser')  {
+          const inactiveUsers = this.users.filter(user => user.isActive === false);
+          this.setState({usersForRender: inactiveUsers})
+      } else {
+          this.setState({usersForRender: this.users})
+      }
   }
   render() {
     return (
         <React.Fragment>
-            <button onClick = {this.showActiveUsers}>Show active users</button>
+            <div className='buttonContainer'>
+                <button className='activeUser' onClick={(e)=>this.showUsers(e)}>Show active users</button>
+                <button className='inactiveUser' onClick={(e)=>this.showUsers(e)}>Show inactive users</button>
+                <button className='allUser' onClick={(e)=>this.showUsers(e)}>Show all users</button>
+            </div>
             <div className='cardContainer'>
-                {this.state.users.map(user => {
+                {this.state.usersForRender.map(user => {
                     return <UserCard key={user._id} user={user}/>
                 })}
             </div>

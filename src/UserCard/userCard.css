@@ -23,6 +23,7 @@
     background-color: #f5f5f5;
     border-top: 1px solid #ddd;
     text-align: center;
+    padding: 10px;
 }
 .active, .not-active {
     width: 20px;
@@ -34,4 +35,7 @@
 }
 .not-active  {
     background: grey;
+}
+.selectUser {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
