@@ -22,9 +22,14 @@ class App extends PureComponent {
       if (e.currentTarget.className === 'activeUser'){
           const activeUsers =  this.users.filter(user => user.isActive === true);
           this.setState({usersForRender: activeUsers})
+          console.log('active user');
+          console.log(e.currentTarget);
+          e.currentTarget.classList.add('notVisible');
       } else if (e.currentTarget.className === 'inactiveUser')  {
           const inactiveUsers = this.users.filter(user => user.isActive === false);
           this.setState({usersForRender: inactiveUsers})
+          console.log('inactive user');
+          e.currentTarget.classList.add('notVisible');
       } else {
           this.setState({usersForRender: this.users})
       }
@@ -33,9 +38,10 @@ class App extends PureComponent {
     return (
         <React.Fragment>
             <div className='buttonContainer'>
+                {()=> this.showButtons()}
                 <button className='activeUser' onClick={(e)=>this.showUsers(e)}>Show active users</button>
                 <button className='inactiveUser' onClick={(e)=>this.showUsers(e)}>Show inactive users</button>
-                <button className='allUser' onClick={(e)=>this.showUsers(e)}>Show all users</button>
+                {/*<button className='allUser' onClick={(e)=>this.showUsers(e)}>Show all users</button>*/}
             </div>
             <div className='cardContainer'>
                 {this.state.usersForRender.map(user => {

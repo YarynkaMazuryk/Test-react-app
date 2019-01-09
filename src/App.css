@@ -13,3 +13,9 @@
   padding: 5px;
   margin-right: 10px;
 }
+.notVisible {
+  display: none;
+}
+.visible {
+  display: block;
+}
