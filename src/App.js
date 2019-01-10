@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import UserCard from './UserCard'
+import SingUp from './SingUp'
 import './App.css';
 
 class App extends PureComponent {
@@ -41,6 +42,7 @@ class App extends PureComponent {
                     return <UserCard key={user._id} user={user}/>
                 })}
             </div>
+          <SingUp />
         </React.Fragment>
     );
   }
