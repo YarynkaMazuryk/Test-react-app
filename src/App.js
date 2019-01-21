@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import UserCard from './UserCard'
 import SingUp from './SingUp'
 import './App.css';
 
-class App extends PureComponent {
+class App extends Component {
   constructor () {
     super();
     this.users = [];
@@ -29,20 +29,26 @@ class App extends PureComponent {
   showAllUsers(){
       this.setState({usersForRender: this.users, showActiveUser: true, allUser: false, showInactiveUser: true })
   }
+  addNewUser(user) {
+    this.users.push(user);
+    this.setState({usersForRender: this.users});
+  }
   render() {
+    const {showActiveUser, showInactiveUser, allUser } = this.state;
     return (
         <React.Fragment>
+          {/*make destruction*/}
             <div className='buttonContainer'>
-                {this.state.showActiveUser && <button className='activeUser' onClick={()=>this.showUsers(true)}>Show active users</button> }
-                {this.state.showInactiveUser && <button className='inactiveUser' onClick={()=>this.showUsers(false)}>Show inactive users</button> }
-                {this.state.allUser && <button className='allUser' onClick={()=>this.showAllUsers()}>Show all users</button>}
+                {showActiveUser && <button className='activeUser' onClick={()=>this.showUsers(true)}>Show active users</button> }
+                {showInactiveUser && <button className='inactiveUser' onClick={()=>this.showUsers(false)}>Show inactive users</button> }
+                {allUser && <button className='allUser' onClick={()=>this.showAllUsers()}>Show all users</button>}
             </div>
             <div className='cardContainer'>
                 {this.state.usersForRender.map(user => {
                     return <UserCard key={user._id} user={user}/>
                 })}
             </div>
-          <SingUp />
+          <SingUp addNewUser={user => this.addNewUser(user)} />
         </React.Fragment>
     );
   }
