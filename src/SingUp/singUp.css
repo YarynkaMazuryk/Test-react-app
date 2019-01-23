@@ -15,16 +15,24 @@
     padding: 10px;
     border: solid 1px #BDC7D8;
 }
-
+#checkbox {
+    width: initial;
+    margin-bottom: 10px;
+}
 #submit {
     width: 50%;
     background-color: #5bc0de;
-    border-color: #46b8da;
+    border-color: #5bc0de;
     font-weight: bold;
     padding: 12px 15px;
     color: #ffffff;
     margin: 0 auto;
     cursor: pointer;
+}
+#submit:disabled {
+    background: grey;
+    border: 1px solid grey;
+    cursor: auto;
 }
 .singUp .error {
     border: 2px solid #cc0000;;
@@ -34,5 +42,9 @@
     font-size: 12px;
     margin-bottom: 10px;
 }
+
+
+
+
 
 

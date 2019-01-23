@@ -1,57 +1,62 @@
 import React, { Component } from 'react';
-import UserCard from './UserCard'
-import SingUp from './SingUp'
-import './App.css';
+
+import UserList from "./UserList";
+import SingUp from "./SingUp";
+import Loader from "./Loader";
+
+// import {Router, Route, Link} from 'react-router-dom';
+// import createBrowserHistory from 'history/createBrowserHistory';
+// const history = createBrowserHistory();
 
 class App extends Component {
-  constructor () {
-    super();
-    this.users = [];
+  constructor (props) {
+    super(props);
+    this.users = []
     this.state = {
-      usersForRender: [],
-      showActiveUser: true,
-      showInactiveUser: true,
-      allUser: false
+      usersList: []
     }
   }
   componentWillMount() {
-      fetch(`http://www.json-generator.com/api/json/get/cpTmnSrPCa?indent=2`)
-          .then(result => result.json()
-              .then(data => {
-                  this.users = data;
-                  this.setState({usersForRender: data})
-              }))
+    fetch(`http://www.json-generator.com/api/json/get/cpTmnSrPCa?indent=2`)
+      .then(result => result.json()
+        .then(data => {
+          this.users = data;
+          this.setState({usersList: data});
+        }))
   }
-  showUsers(showActive) {
-      const activeUsers =  this.users.filter(user => user.isActive === showActive);
-      this.setState({usersForRender: activeUsers, showActiveUser: !showActive, showInactiveUser: showActive,  allUser: true})
-  }
-  showAllUsers(){
-      this.setState({usersForRender: this.users, showActiveUser: true, allUser: false, showInactiveUser: true })
-  }
+
   addNewUser(user) {
-    this.users.push(user);
-    this.setState({usersForRender: this.users});
+    this.users.push(user)
+    this.setState({usersList: this.users });
   }
+
   render() {
-    const {showActiveUser, showInactiveUser, allUser } = this.state;
     return (
-        <React.Fragment>
-          {/*make destruction*/}
-            <div className='buttonContainer'>
-                {showActiveUser && <button className='activeUser' onClick={()=>this.showUsers(true)}>Show active users</button> }
-                {showInactiveUser && <button className='inactiveUser' onClick={()=>this.showUsers(false)}>Show inactive users</button> }
-                {allUser && <button className='allUser' onClick={()=>this.showAllUsers()}>Show all users</button>}
-            </div>
-            <div className='cardContainer'>
-                {this.state.usersForRender.map(user => {
-                    return <UserCard key={user._id} user={user}/>
-                })}
-            </div>
-          <SingUp addNewUser={user => this.addNewUser(user)} />
-        </React.Fragment>
+      <div>
+        { this.state.usersList.length > 0
+          ? <UserList usersList={this.state.usersList} />
+          : <Loader/>
+        }
+        <SingUp addNewUser={user => this.addNewUser(user)} />
+      </div>
     );
   }
 }
 
 export default App;
+
+
+
+{/*<UserList usersList = {this.state.usersList}/>*/}
+{/*<Router history={history}>*/}
+{/*<div>*/}
+{/*<nav>*/}
+{/*<ul className='navigation'>*/}
+{/*<li><Link to='/singUp'>Sing up</Link></li>*/}
+{/*<li><Link to='/users'>User List</Link></li>*/}
+{/*</ul>*/}
+{/*</nav>*/}
+{/*<Route path='/singUp' component={SingUp}/>*/}
+{/*<Route path='/users' component={UserList}/>*/}
+{/*</div>*/}
+{/*</Router>*/}
