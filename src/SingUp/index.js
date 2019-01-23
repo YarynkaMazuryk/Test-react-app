@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './singUp.css';
+import v4 from 'uuid/v4';
+
 
 import getError from "../helpers/validationHelper";
 
@@ -11,12 +13,16 @@ class SingUp extends Component {
       email: '',
       about: '',
       isActive: true,
-      _id: 1,
+      _id: '',
 
       errorName: '*Please enter the name',
       errorEmail: '*Please enter the email',
       errorAbout: '*Please enter the description',
     }
+  }
+
+  componentWillMount() {
+    this.setState({_id: v4()});
   }
 
   validateField(val, fieldName){
@@ -32,6 +38,7 @@ class SingUp extends Component {
     const {errorName,errorEmail,errorAbout} = this.state;
 
     if (errorName === '' && errorEmail === '' && errorAbout === '') {
+      console.log(this.state);
       this.props.addNewUser(this.state);
     }
   }

@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    background-color: #d6d7da;
+    background: rgba(229, 230, 231, 0.2);
     border-bottom: 1px solid #ddd;
     padding: 10px;
 }
@@ -25,18 +25,19 @@
     padding: 10px;
 }
 .footerCard {
-    background-color: #d6d7da;
+    background: rgba(229, 230, 231, 0.2);
     border-top: 1px solid #ddd;
     text-align: center;
     padding: 10px;
 }
 .active, .not-active {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
+    margin: 10px;
 }
 .active {
-    background: green;
+    background: #5bc0de;
 }
 .not-active  {
     background: grey;
