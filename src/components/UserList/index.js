@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import UserCard from '../UserCard'
 import './UserList.css';
 
-
 const Button = styled.button`
   color: #fff;
   background-color: #5bc0de;
@@ -60,5 +59,6 @@ class UserList extends Component {
     );
   }
 }
+
 
 export default UserList;

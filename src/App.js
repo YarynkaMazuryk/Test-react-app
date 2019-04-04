@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import {Router, Route, Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
+import {fetchUsers} from './store/actions/fetchUsers';
 import UserList from "./components/UserList";
-import SingUp from "./components/SingUp";
+import SingUp from "./components/SingUp/SingUp";
 import Loader from "./components/Loader";
 
-import {Router, Route, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 const history = createBrowserHistory();
 
@@ -15,23 +17,18 @@ class App extends Component {
   }
   state = {
       usersList: []
-    }
+  }
   componentWillMount() {
-    fetch(`http://www.json-generator.com/api/json/get/cpTmnSrPCa?indent=2`)
-      .then(result => result.json()
-        .then(data => {
-          this.users = data;
-          this.setState({usersList: data});
-        }))
+      this.props.fetchUsers();
   }
 
-  addNewUser(user) {
-    this.users.push(user)
-    this.setState({usersList: this.users });
-  }
+  // addNewUser(user) {
+  //   this.users.push(user)
+  //   this.setState({usersList: this.users });
+  // }
 
   render() {
-    return (
+      return (
       <Router history={history}>
         <div>
           <nav>
@@ -41,8 +38,8 @@ class App extends Component {
             </ul>
           </nav>
           <Route path='/singUp'  component={() => <SingUp addNewUser={user => this.addNewUser(user)}/>} />
-          { this.state.usersList.length > 0
-            ? <Route path='/users' component={() => <UserList  usersList={this.state.usersList}/>} />
+          { this.props.allUser.length > 0
+            ? <Route path='/users' component={() => <UserList  usersList={this.props.allUser}/>} />
             : <Route path='/users' component={Loader} />
           }
        </div>
@@ -51,6 +48,21 @@ class App extends Component {
   }
 }
 
-export default App;
+
+const mapStateToProps = state => {
+    return {
+        renderedUser: state.renderedUser,
+        allUser: state.allUser,
+    };
+};
+
+ const mapDispatchToProps = dispatch => {
+    return {
+        fetchUsers: () => dispatch(fetchUsers())
+    };
+ };
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
 
 

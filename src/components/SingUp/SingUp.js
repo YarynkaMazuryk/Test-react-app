@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import './singUp.css';
 import v4 from 'uuid/v4';
 
-
 import getError from "../../helpers/validationHelper";
+import {ADD_USER} from "../../store/actions/actionsTypes";
+import {addNewUser} from '../../store/actions/filterUsers'
 
 class SingUp extends Component {
   constructor(props) {
@@ -66,6 +68,19 @@ class SingUp extends Component {
   }
 }
 
-export default SingUp;
+const mapStateToProps = state => {
+  return {
+    renderedUser: state.renderedUser,
+    allUser: state.allUser,
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addNewUser: (newUser) => dispatch(addNewUser(newUser))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SingUp);
 
 
