@@ -3,7 +3,7 @@ import './singUp.css';
 import v4 from 'uuid/v4';
 
 
-import getError from "../helpers/validationHelper";
+import getError from "../../helpers/validationHelper";
 
 class SingUp extends Component {
   constructor(props) {

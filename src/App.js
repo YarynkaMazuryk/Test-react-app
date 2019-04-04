@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import UserList from "./UserList";
-import SingUp from "./SingUp";
-import Loader from "./Loader";
+import UserList from "./components/UserList";
+import SingUp from "./components/SingUp";
+import Loader from "./components/Loader";
 
 import {Router, Route, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
@@ -12,10 +12,10 @@ class App extends Component {
   constructor (props) {
     super(props);
     this.users = []
-    this.state = {
+  }
+  state = {
       usersList: []
     }
-  }
   componentWillMount() {
     fetch(`http://www.json-generator.com/api/json/get/cpTmnSrPCa?indent=2`)
       .then(result => result.json()

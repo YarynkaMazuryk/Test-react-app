@@ -1,0 +1,10 @@
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.notVisible {
+  display: none;
+}
+.visible {
+  display: block;
+}
