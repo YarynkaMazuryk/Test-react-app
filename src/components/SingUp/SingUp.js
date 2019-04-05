@@ -59,7 +59,7 @@ class SingUp extends Component {
           <p className="errorMessage">{errorAbout}</p>
           <label>Active status</label>
           <input type="checkbox" name="active" id='checkbox' checked={isActive} onChange = {(e)=> this.validateField(e.target.checked, "isActive")}/>
-          <input type="submit" id='submit' onClick = {(e) => this.getState(e)} />
+          <input type="submit" id='submit' value='Submit' onClick = {(e) => this.getState(e)} />
         </form>
       </div>
     )
