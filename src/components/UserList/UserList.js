@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 
@@ -18,28 +18,22 @@ const Button = styled.button`
   margin-right: 10px;
 `;
 
-class UserList extends Component {
-  constructor (props) {
-    super(props);
-  }
-
-  render() {
+const UserList = (props) => {
     return (
         <React.Fragment>
             <div className='buttonContainer'>
-                {this.props.showActiveUser && <Button  onClick={()=>this.props.showUsers(this.props.allUser,true)}>Show active users</Button> }
-                {this.props.showInactiveUser && <Button onClick={()=>this.props.showUsers(this.props.allUser,false)}>Show inactive users</Button> }
-                {this.props.showAllUser && <Button onClick={()=>this.props.showAllUsers()}>Show all users</Button>}
+                {props.showActiveUser && <Button  onClick={()=>props.showUsers(props.allUser,true)}>Show active users</Button> }
+                {props.showInactiveUser && <Button onClick={()=>props.showUsers(props.allUser,false)}>Show inactive users</Button> }
+                {props.showAllUser && <Button onClick={()=>props.showAllUsers()}>Show all users</Button>}
             </div>
             <div className='cardContainer'>
-                {this.props.renderedUser.map(user => {
+                {props.renderedUser.map(user => {
                     return <UserCard key={user._id} user={user}/>
-                })}
+                })};
             </div>
         </React.Fragment>
     );
-  }
-}
+  };
 
 const mapStateToProps = state => {
     return {
