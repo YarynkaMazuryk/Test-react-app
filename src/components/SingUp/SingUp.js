@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import './singUp.css';
 import v4 from 'uuid/v4';
 
+import './singUp.css';
 import getError from "../../helpers/validationHelper";
-import {ADD_USER} from "../../store/actions/actionsTypes";
-import {addNewUser} from '../../store/actions/filterUsers'
+import {addNewUser} from '../../store/actions/controlUsers'
 
 class SingUp extends Component {
   constructor(props) {
@@ -40,7 +39,6 @@ class SingUp extends Component {
     const {errorName,errorEmail,errorAbout} = this.state;
 
     if (errorName === '' && errorEmail === '' && errorAbout === '') {
-      console.log(this.state);
       this.props.addNewUser(this.state);
     }
   }
