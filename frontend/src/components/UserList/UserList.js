@@ -19,18 +19,24 @@ const Button = styled.button`
 `;
 
 const UserList = (props) => {
+    const {showActiveUser, showInactiveUser, showAllUser, showUsers, showAllUsers, allUser} = props;
     return (
         <React.Fragment>
             <div className='buttonContainer'>
-                {props.showActiveUser && <Button  onClick={()=>props.showUsers(props.allUser,true)}>Show active users</Button> }
-                {props.showInactiveUser && <Button onClick={()=>props.showUsers(props.allUser,false)}>Show inactive users</Button> }
-                {props.showAllUser && <Button onClick={()=>props.showAllUsers()}>Show all users</Button>}
+                {showActiveUser && <Button  onClick={()=>showUsers(allUser,true)}>Show active users</Button> }
+                {showInactiveUser && <Button onClick={()=>showUsers(allUser,false)}>Show inactive users</Button> }
+                {showAllUser && <Button onClick={()=>showAllUsers()}>Show all users</Button>}
             </div>
-            <div className='cardContainer'>
-                {props.renderedUser.map(user => {
-                    return <UserCard key={user._id} user={user}/>
-                })};
-            </div>
+            {
+                allUser.length > 0
+                    ? <div className='cardContainer'>
+                        {props.renderedUser.map(user => {
+                            return <UserCard key={user._id} user={user}/>
+                        })}
+                      </div>
+                    : <p>No users yet</p>
+            }
+
         </React.Fragment>
     );
   };

@@ -18,6 +18,7 @@ class App extends Component {
       this.props.fetchUsers();
   }
   render() {
+      const {isLoading} = this.props;
       return (
       <Router history={history}>
         <div>
@@ -28,10 +29,9 @@ class App extends Component {
             </ul>
           </nav>
           <Route path='/singUp'  component={() => <SingUp addNewUser={user => this.addNewUser(user)}/>} />
-          { this.props.allUser.length > 0
-            ? <Route path='/users' component={() => <UserList/>} />
-            : <Route path='/users' component={Loader} />
-          }
+            { isLoading ? <Route path='/users' component={Loader} /> :
+                          <Route path='/users' component={() => <UserList/>} />
+            }
        </div>
      </Router>
     );
@@ -43,6 +43,9 @@ const mapStateToProps = state => {
     return {
         renderedUser: state.renderedUser,
         allUser: state.allUser,
+        message: state.message,
+        error: state.error,
+        isLoading: state.isLoading
     };
 };
 

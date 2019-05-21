@@ -3,4 +3,4 @@ export const updateObject = (oldObject, updatedValue) => {
         ...oldObject,
         ...updatedValue
     }
-}
+};
