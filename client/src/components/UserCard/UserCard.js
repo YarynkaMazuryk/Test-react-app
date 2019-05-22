@@ -11,7 +11,6 @@ const UserCard = (props) => {
              <div className='headerCard'>
                  <p className={status ?  'active' : 'not-active'}></p>
                  <p>{name}</p>
-                 <p>{name}</p>
                  <p className='cancelButton' onClick={() => removeUser({"id":_id})}>X</p>
              </div>
              <div className='mainContent'>
