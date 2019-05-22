@@ -4,7 +4,7 @@ export const fetchUsers = () => dispatch => {
     dispatch({
         type: FETCH_USERS_REQUEST
     });
-    fetch(`http://localhost:3001/api/users/getUsers`)
+    fetch(`/api/users/getUsers`)
         .then(result => result.json()
             .then(data => {
                 if (data.success) {

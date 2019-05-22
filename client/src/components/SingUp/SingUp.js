@@ -45,8 +45,6 @@ class SingUp extends Component {
                 "about": about,
                 "status": status
             });
-            // const history = createHashHistory();
-            // history.push('/users');
             return true;
         } else {
             return false;
@@ -55,23 +53,29 @@ class SingUp extends Component {
 
     render () {
         const {name, email, status, about, errorName, errorAbout, errorEmail} = this.state;
-        return ( <div className='login'>
-                <h3>Login form</h3>
-                <form className='singUp' onSubmit={(e) => this.handleSubmit(e)} >
-                    <label>Name</label>
-                    <input className={errorName && 'error'} type="text" placeholder='Enter the name' value={name} onChange = {(e)=> this.validateField(e.target.value, "name")}/>
-                    <p className="errorMessage">{errorName}</p>
-                    <label>Email</label>
-                    <input className={errorEmail && 'error'} type="email" placeholder='Enter the email' value={email} onChange = {(e)=> this.validateField(e.target.value, "email")}/>
-                    <p className="errorMessage">{errorEmail}</p>
-                    <label>Description</label>
-                    <input className={errorAbout && 'error'} type="text" placeholder='Enter the description' value={about} onChange = {(e)=> this.validateField(e.target.value, "about")}/>
-                    <p className="errorMessage">{errorAbout}</p>
-                    <label>Active status</label>
-                    <input type="checkbox" name="active" id='checkbox' checked={status} value={status} onChange = {(e)=> this.validateField(e.target.checked, "isActive")}/>
-                    <input type="submit" id='submit'/>
-                </form>
-            </div>
+        const {error} = this.props;
+        return (
+            <React.Fragment>
+                {error ? <p>{error}</p>
+                    :<div className='login'>
+                        <h3>Login form</h3>
+                        <form className='singUp' onSubmit={(e) => this.handleSubmit(e)} >
+                            <label>Name</label>
+                            <input className={errorName && 'error'} type="text" placeholder='Enter the name' value={name} onChange = {(e)=> this.validateField(e.target.value, "name")}/>
+                            <p className="errorMessage">{errorName}</p>
+                            <label>Email</label>
+                            <input className={errorEmail && 'error'} type="email" placeholder='Enter the email' value={email} onChange = {(e)=> this.validateField(e.target.value, "email")}/>
+                            <p className="errorMessage">{errorEmail}</p>
+                            <label>Description</label>
+                            <input className={errorAbout && 'error'} type="text" placeholder='Enter the description' value={about} onChange = {(e)=> this.validateField(e.target.value, "about")}/>
+                            <p className="errorMessage">{errorAbout}</p>
+                            <label>Active status</label>
+                            <input type="checkbox" name="active" id='checkbox' checked={status} value={status} onChange = {(e)=> this.validateField(e.target.checked, "isActive")}/>
+                            <input type="submit" id='submit'/>
+                        </form>
+                    </div>
+                }
+            </React.Fragment>
         )
     }
 }
@@ -80,6 +84,7 @@ const mapStateToProps = state => {
     return {
         renderedUser: state.renderedUser,
         allUser: state.allUser,
+        error: state.error
     }
 };
 

@@ -14,6 +14,7 @@
 }
 .headerCard {
     display: flex;
+    position: relative;
     align-items: center;
     font-weight: 500;
     background: rgba(229, 230, 231, 0.2);
@@ -44,4 +45,10 @@
 }
 .selectUser {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.cancelButton {
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 0;
 }
