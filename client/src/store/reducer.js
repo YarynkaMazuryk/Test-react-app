@@ -45,9 +45,10 @@ const reducer = (state = initialState, action) => {
         //delete User
         case types.DELETE_USER_SUCCESS:
             return updateObject (state,
-                {renderedUser: findAndRemoveElement(state.renderedUser, action.payload.id),
+                {
+                    renderedUser: findAndRemoveElement(state.renderedUser, action.payload.id),
                     allUser: findAndRemoveElement(state.renderedUser, action.payload.id),
-                    isLoading: false});
+                              isLoading: false});
         case types.DELETE_USER_ERROR:
             return updateObject (state,
                 { error: action.payload.error,

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import v4 from 'uuid/v4';
+import createBrowserHistory from 'history/createBrowserHistory';
 
 import './singUp.css';
 import getError from "../../helpers/validationHelper";
-import {addNewUser} from '../../store/actions/controlUsers'
+import {addUserSuccess, addUserError} from '../../store/actions/controlUsers'
+const history = createBrowserHistory();
 
 class SingUp extends Component {
     constructor(props) {
@@ -22,10 +23,6 @@ class SingUp extends Component {
         }
     }
 
-    componentWillMount() {
-        this.setState({_id: v4()});
-    }
-
     validateField(val, fieldName){
         let errorStateName = `error${fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}`;
         this.setState({
@@ -37,17 +34,27 @@ class SingUp extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const {errorName,errorEmail,errorAbout, name, email, about, status} = this.state;
-
+        const {addUserSuccess, addUserError} = this.props;
         if (errorName === '' && errorEmail === '' && errorAbout === '') {
-            this.props.addNewUser({
-                "name": name,
-                "email": email,
-                "about": about,
-                "status": status
-            });
-            return true;
-        } else {
-            return false;
+            //add new user
+            const jsonData = JSON.stringify({"name": name, "email": email, "about": about, "status": status});
+            fetch(`/api/users/putData`, {
+                method: 'post',
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: jsonData,
+            })
+                .then(result => result.json()
+                    .then(data => {
+                        if (data.success) {
+                            addUserSuccess(data);
+                            history.push('/users');
+                        } else {
+                            addUserError(data);
+                        }
+                    }));
         }
     }
 
@@ -90,7 +97,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addNewUser: (newUser) => dispatch(addNewUser(newUser))
+        addUserSuccess: (data) => dispatch(addUserSuccess(data)),
+        addUserError: (data) => dispatch(addUserError(data))
     }
 };
 

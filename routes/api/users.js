@@ -46,7 +46,6 @@ router.delete("/deleteUser", (req, res) => {
     const { id } = req.body;
     User.findOneAndDelete(id, err => {
         if (err) return res.send(err);
-        // res.status(404).json({success: false})
         return res.json({ success: true, id: id });
     });
 });

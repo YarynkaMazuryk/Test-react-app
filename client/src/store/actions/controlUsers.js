@@ -28,10 +28,21 @@ export const addNewUser = (data) => dispatch => {
                 }
             }));
 };
-
+export const addUserSuccess = (data) => {
+    return {
+        type: types.ADD_USER_SUCCESS,
+        payload: data
+    }
+};
+export const addUserError = (data) => {
+    return {
+        type: types.ADD_USER_ERROR,
+        payload: data
+    }
+}
 export const removeUser = (data) => dispatch => {
+    console.log(data);
     const jsonData = JSON.stringify(data);
-    console.log(jsonData);
     fetch(`/api/users/deleteUser`, {
         method: 'delete',
         mode: "cors",
@@ -43,7 +54,6 @@ export const removeUser = (data) => dispatch => {
         .then(result => result.json()
             .then(data => {
                 if (data.success) {
-                    console.log(data);
                     dispatch({
                          type: types.DELETE_USER_SUCCESS,
                          payload: data

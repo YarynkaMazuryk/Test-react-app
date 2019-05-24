@@ -1,43 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d7efe40-637d-4563-bcf9-6ad6bb2a0b74" name="Default" comment="BE: add api 'addUser' and 'deleteUser'">
-      <change afterPath="$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
+    <list default="true" id="3d7efe40-637d-4563-bcf9-6ad6bb2a0b74" name="Default" comment="delete console.log in findandRemove function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/api/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Loader/Loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader/loader.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Loader/loader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SingUp/SingUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingUp/SingUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SingUp/singUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingUp/singUp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserCard/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserCard/userCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard/userCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserList/UserList.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserList/UserList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserList/UserList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserList/UserList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/libs/Button" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/libs/Button" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/updateObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/updateObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/validationHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/validationHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/actionsTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/actionsTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/controlUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/fetchUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/fetchUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SingUp/SingUp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SingUp/SingUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SingUp/SingUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,10 +22,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/store/actions/controlUsers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="48" column="38" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="38" />
+            <state relative-caret-position="275">
+              <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -62,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/UserCard/UserCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+            <state relative-caret-position="89">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -71,38 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/store/actions/actionsTypes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/store/actions/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="49" column="51" lean-forward="true" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/store/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="48" column="89" lean-forward="true" selection-start-line="48" selection-start-column="89" selection-end-line="48" selection-end-column="89" />
+            <state relative-caret-position="242">
+              <caret line="49" column="89" lean-forward="true" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -113,29 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/SingUp/SingUp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="53" />
+              <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -221,16 +153,16 @@
         <option value="$PROJECT_DIR$/client/src/store/reducers/switchVisibleUsers.js" />
         <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/components/UserList/UserList.js" />
-        <option value="$PROJECT_DIR$/client/src/components/SingUp/SingUp.js" />
         <option value="$PROJECT_DIR$/client/src/components/UserCard/userCard.css" />
         <option value="$PROJECT_DIR$/client/src/store/actions/index.js" />
-        <option value="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" />
         <option value="$PROJECT_DIR$/client/src/store/actions/actionsTypes.js" />
-        <option value="$PROJECT_DIR$/routes/api/users.js" />
-        <option value="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" />
-        <option value="$PROJECT_DIR$/client/src/store/reducer.js" />
+        <option value="$PROJECT_DIR$/client/src/components/UserList/UserList.js" />
+        <option value="$PROJECT_DIR$/client/src/components/SingUp/SingUp.js" />
+        <option value="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" />
         <option value="$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js" />
+        <option value="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" />
+        <option value="$PROJECT_DIR$/routes/api/users.js" />
+        <option value="$PROJECT_DIR$/client/src/store/reducer.js" />
       </list>
     </option>
   </component>
@@ -391,7 +323,8 @@
       <workItem from="1558097250614" duration="9568000" />
       <workItem from="1558332242204" duration="18097000" />
       <workItem from="1558419873944" duration="25236000" />
-      <workItem from="1558507472491" duration="23345000" />
+      <workItem from="1558507472491" duration="27230000" />
+      <workItem from="1558679362793" duration="4484000" />
     </task>
     <task id="LOCAL-00001" summary="basic functionality">
       <created>1546531108937</created>
@@ -491,11 +424,32 @@
       <option name="project" value="LOCAL" />
       <updated>1558442601672</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="BE:change folder structure and refactoring App component">
+      <created>1558534037315</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1558534037315</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add function delete user">
+      <created>1558534095461</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1558534095462</updated>
+    </task>
+    <task id="LOCAL-00017" summary="delete console.log in findandRemove function">
+      <created>1558535338044</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1558535338044</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282961000" />
+    <option name="totallyTimeSpent" value="291330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,7 +464,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -522,9 +476,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49776787" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.6183036" visible="true" weight="0.40752864" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6183036" visible="true" weight="0.24713585" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49627978" weight="0.30605564" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4985119" weight="0.31260228" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4985119" visible="true" weight="0.2913257" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.38169643" side_tool="true" weight="0.25040916" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -589,7 +543,11 @@
     <MESSAGE value="change class Component to Functional component" />
     <MESSAGE value="change value 'submit' button" />
     <MESSAGE value="add Backend to the project, connect to database MongoDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Backend to the project, connect to database MongoDB" />
+    <MESSAGE value="BE:change folder structure" />
+    <MESSAGE value="BE:change folder structure and refactoring App component" />
+    <MESSAGE value="add function delete user" />
+    <MESSAGE value="delete console.log in findandRemove function" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete console.log in findandRemove function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -653,23 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Loader/Loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/helpers/validationHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="15" column="244" selection-start-line="15" selection-start-column="244" selection-end-line="15" selection-end-column="244" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SingUp/SingUp.js" />
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -678,52 +619,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/store/reducers/controlUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/store/reducers/switchVisibleUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/store/reducers/fetchUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/store/reducers/controlUsers.js" />
+    <entry file="file://$PROJECT_DIR$/client/src/store/reducers/switchVisibleUsers.js" />
+    <entry file="file://$PROJECT_DIR$/client/src/store/reducers/fetchUsers.js" />
     <entry file="file://$PROJECT_DIR$/client/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/UserList/UserList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="20" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -763,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/node_modules/history/createBrowserHistory.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -777,16 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/SingUp/SingUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -803,31 +690,7 @@
     <entry file="file://$PROJECT_DIR$/client/src/store/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/UserCard/UserCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/store/actions/actionsTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="49" column="51" lean-forward="true" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -838,24 +701,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Loader/Loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/helpers/validationHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="15" column="244" selection-start-line="15" selection-start-column="244" selection-end-line="15" selection-end-column="244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/store/actions/actionsTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/UserList/UserList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/SingUp/SingUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/store/actions/controlUsers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="38" />
+        <state relative-caret-position="275">
+          <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/UserCard/UserCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        <state relative-caret-position="17">
+          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/store/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="48" column="89" lean-forward="true" selection-start-line="48" selection-start-column="89" selection-end-line="48" selection-end-column="89" />
+        <state relative-caret-position="242">
+          <caret line="49" column="89" lean-forward="true" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>

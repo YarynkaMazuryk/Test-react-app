@@ -5,13 +5,13 @@ import {connect} from "react-redux";
 
 const UserCard = (props) => {
 
-     const {user : {status, about, email, name, _id}, removeUser} = props;
+     const {user, user : {status, about, email, name, _id}, removeUser} = props;
      return (
          <div className='userCard'>
              <div className='headerCard'>
                  <p className={status ?  'active' : 'not-active'}></p>
                  <p>{name}</p>
-                 <p className='cancelButton' onClick={() => removeUser({"id":_id})}>X</p>
+                 <p className='cancelButton' onClick={() => removeUser({"id":_id, user})}>X</p>
              </div>
              <div className='mainContent'>
                  {about}
