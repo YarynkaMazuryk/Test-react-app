@@ -53,8 +53,6 @@ const reducer = (state = initialState, action) => {
             return updateObject (state,
                 { error: action.payload.error,
                     isLoading: false});
-
-
         case types.SHOW_USERS:
             return updateObject (state, {
                 renderedUser: action.payload,

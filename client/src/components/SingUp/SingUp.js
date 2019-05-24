@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import createBrowserHistory from 'history/createBrowserHistory';
 
 import './singUp.css';
 import getError from "../../helpers/validationHelper";
 import {addUserSuccess, addUserError} from '../../store/actions/controlUsers'
-const history = createBrowserHistory();
+
 
 class SingUp extends Component {
     constructor(props) {
@@ -34,7 +33,7 @@ class SingUp extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const {errorName,errorEmail,errorAbout, name, email, about, status} = this.state;
-        const {addUserSuccess, addUserError} = this.props;
+        const {addUserSuccess, addUserError, history} = this.props;
         if (errorName === '' && errorEmail === '' && errorAbout === '') {
             //add new user
             const jsonData = JSON.stringify({"name": name, "email": email, "about": about, "status": status});

@@ -18,7 +18,7 @@ class App extends Component {
             <li><Link to='/users'>User List</Link></li>
             </ul>
           </nav>
-          <Route path='/singUp'  component={() => <SingUp/>} />
+          <Route path='/singUp'  component={() => <SingUp history={history} />} />
           <Route path='/users' component={() => <UserList/>} />
        </div>
      </Router>

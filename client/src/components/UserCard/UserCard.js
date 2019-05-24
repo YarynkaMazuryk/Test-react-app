@@ -4,7 +4,6 @@ import {removeUser} from "../../store/actions";
 import {connect} from "react-redux";
 
 const UserCard = (props) => {
-
      const {user, user : {status, about, email, name, _id}, removeUser} = props;
      return (
          <div className='userCard'>
