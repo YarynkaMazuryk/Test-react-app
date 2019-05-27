@@ -44,10 +44,9 @@ router.post("/putData", (req, res) => {
 // @desc delete user by ID
 router.delete("/deleteUser", (req, res) => {
     const { id } = req.body;
-    User.findOneAndDelete(id, err => {
+    User.findByIdAndDelete(id, err => {
         if (err) return res.send(err);
         return res.json({ success: true, id: id });
     });
 });
-
 module.exports = router;
