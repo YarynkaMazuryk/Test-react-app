@@ -47,6 +47,22 @@ router.delete("/deleteUser", (req, res) => {
     User.findByIdAndDelete(id, err => {
         if (err) return res.send(err);
         return res.json({ success: true, id: id });
+    })
+});
+
+// @route update api/users
+// @desc update user by ID
+router.post("/updateUser", (req, res) => {
+    const { id, update } = req.body;
+    User.findByIdAndUpdate(id, update, err => {
+        if (!err) {
+            console.log('error');
+            res.json({ success: false, error: err });
+        } else {
+            let updateUser = update;
+            updateUser._id = id;
+            return res.json({ success: true, id: id, updateUser: updateUser});
+        }
     });
 });
 module.exports = router;
