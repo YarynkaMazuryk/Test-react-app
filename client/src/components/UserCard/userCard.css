@@ -46,9 +46,15 @@
 .selectUser {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-.cancelButton {
+.removeButton {
     position: absolute;
     cursor: pointer;
     right: 20px;
     top: 0;
+}
+.editButton {
+    position: absolute;
+    cursor: pointer;
+    right: 40px;
+    top: 10px;
 }

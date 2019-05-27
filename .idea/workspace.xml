@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d7efe40-637d-4563-bcf9-6ad6bb2a0b74" name="Default" comment="FE: make redirect after successful sign up">
+    <list default="true" id="3d7efe40-637d-4563-bcf9-6ad6bb2a0b74" name="Default" comment="FE: add edit mood for user card">
       <change afterPath="$PROJECT_DIR$/client/src/components/EditeUserCard/EditeUserCard.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/src/helpers/findAndUpdateUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/UserCard/userCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard/userCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/actions/actionsTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/actionsTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,25 +36,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/store/actions/controlUsers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+            <state relative-caret-position="68">
+              <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
               <folding>
                 <element signature="e#90#838#0" />
                 <element signature="e#880#962#0" />
-                <element signature="e#1002#1082#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/UserCard/UserCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="101">
+              <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -181,10 +178,10 @@
         <option value="$PROJECT_DIR$/client/src/helpers/findAndRemoveElement.js" />
         <option value="$PROJECT_DIR$/client/src/helpers/findAndUpdateUser.js" />
         <option value="$PROJECT_DIR$/client/src/components/UserList/UserList.js" />
-        <option value="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" />
         <option value="$PROJECT_DIR$/client/src/store/reducer.js" />
         <option value="$PROJECT_DIR$/routes/api/users.js" />
         <option value="$PROJECT_DIR$/client/src/components/UserCard/UserCard.js" />
+        <option value="$PROJECT_DIR$/client/src/store/actions/controlUsers.js" />
       </list>
     </option>
   </component>
@@ -339,7 +336,7 @@
       <workItem from="1558419873944" duration="25236000" />
       <workItem from="1558507472491" duration="27230000" />
       <workItem from="1558679362793" duration="24803000" />
-      <workItem from="1558938663561" duration="7184000" />
+      <workItem from="1558938663561" duration="7421000" />
     </task>
     <task id="LOCAL-00001" summary="basic functionality">
       <created>1546531108937</created>
@@ -474,11 +471,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558695300698</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="FE: refactoring functionality for delete user">
+      <created>1558953551744</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1558953551744</updated>
+    </task>
+    <task id="LOCAL-00021" summary="BE: create api for update User">
+      <created>1558953636028</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1558953636029</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318833000" />
+    <option name="totallyTimeSpent" value="319070000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,9 +516,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49776787" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.6183036" visible="true" weight="0.2749591" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6183036" weight="0.2749591" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49627978" weight="0.30605564" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4985119" weight="0.19312602" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.4985119" visible="true" weight="0.3715221" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.38169643" side_tool="true" weight="0.25040916" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -599,7 +610,10 @@
     <MESSAGE value="delete console.log in findandRemove function" />
     <MESSAGE value="fix bugs for delete user functionality" />
     <MESSAGE value="FE: make redirect after successful sign up" />
-    <option name="LAST_COMMIT_MESSAGE" value="FE: make redirect after successful sign up" />
+    <MESSAGE value="FE: refactoring functionality for delete user" />
+    <MESSAGE value="BE: create api for update User" />
+    <MESSAGE value="FE: add edit mood for user card" />
+    <option name="LAST_COMMIT_MESSAGE" value="FE: add edit mood for user card" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -817,18 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/store/actions/controlUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
-          <folding>
-            <element signature="e#90#838#0" />
-            <element signature="e#880#962#0" />
-            <element signature="e#1002#1082#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/store/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -855,10 +857,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/UserCard/UserCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="101">
+          <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/store/actions/controlUsers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+          <folding>
+            <element signature="e#90#838#0" />
+            <element signature="e#880#962#0" />
           </folding>
         </state>
       </provider>

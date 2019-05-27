@@ -1,6 +1,7 @@
 import * as types from './actions/actionsTypes';
 import {updateObject} from '../helpers/updateObject';
 import {findAndRemoveElement} from '../helpers/findAndRemoveElement'
+import {findAndUpdateUser} from '../helpers/findAndUpdateUser'
 
 const initialState = {
     renderedUser: [],
@@ -9,6 +10,7 @@ const initialState = {
     showInactiveUser: true,
     showAllUser: false,
     isLoading: false,
+    error: ''
 };
 
 const reducer = (state = initialState, action) => {
@@ -53,6 +55,22 @@ const reducer = (state = initialState, action) => {
             return updateObject (state,
                 { error: action.payload.error,
                     isLoading: false});
+
+        //update User
+        case types.UPDATE_USER_SUCCESS:
+            return updateObject (state,
+                {
+                    renderedUser: findAndUpdateUser(state.renderedUser, action.payload.updateUser),
+                    allUser: findAndUpdateUser(state.renderedUser, action.payload.updateUser),
+                    isLoading: false});
+        case types.UPDATE_USER_ERROR:
+            return updateObject (state,
+                {
+                    error: action.payload.error,
+                    isLoading: false});
+
+
+
         case types.SHOW_USERS:
             return updateObject (state, {
                 renderedUser: action.payload,
